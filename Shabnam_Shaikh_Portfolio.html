@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shabnam Shaikh's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif; color: #f5f5f5; margin: 0;}
+        .w3-row-padding img {margin-bottom: 12px; border-radius: 8px;}
+        .w3-sidebar {width: 120px; background: #111; transition: width 0.3s;}
+        #main {margin-left: 120px; transition: margin-left 0.3s;}
+        @media only screen and (max-width: 600px) {#main {margin-left: 0;}}
+        .w3-card {background-color: #1e1e1e; color: #f5f5f5; border-radius: 8px; padding: 20px; margin-bottom: 20px; transition: transform 0.3s, box-shadow 0.3s;}
+        .w3-card:hover {transform: scale(1.05); box-shadow: 0px 10px 20px rgba(0,0,0,0.7);}
+        .w3-button {border-radius: 8px; transition: background-color 0.3s;}
+        .w3-button:hover {background-color: #444;}
+        .w3-section:hover {background-color: #333;}
+        .w3-top {background-color: #111; transition: background-color 0.3s;}
+        .w3-top:hover {background-color: #222;}
+        .fade-in {animation: fadeIn 2s ease-in;}
+        @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+        .zoom-in {animation: zoomIn 1s ease-in;}
+        @keyframes zoomIn {from {transform: scale(0.9);} to {transform: scale(1);}}
+        .pulse {animation: pulse 1.5s infinite;}
+        @keyframes pulse {0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);}}
+        .animate-on-scroll {opacity: 0; transition: opacity 1s;}
+        .animate-on-scroll.visible {opacity: 1;}
+        .w3-padding-large {padding: 32px;}
+        .w3-padding-64 {padding: 48px;}
+        .w3-card h3 {color: #e0e0e0;}
+        .w3-card p {color: #b0b0b0;}
+        .w3-bar-item p {color: #ddd;}
+        .w3-row-padding .w3-card {border: 1px solid #333;}
+        .w3-top a {color: #ddd;}
+        .w3-top a:hover {background-color: #333; color: #fff;}
+        .w3-row-padding {margin: 0 -16px;}
+        .w3-row-padding .w3-col {padding: 0 16px;}
+        .w3-card {padding: 20px; margin-bottom: 20px;}
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let elements = document.querySelectorAll('.animate-on-scroll');
+            window.addEventListener('scroll', function() {
+                elements.forEach(element => {
+                    if (element.getBoundingClientRect().top < window.innerHeight) {
+                        element.classList.add('visible');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body class="w3-black">
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center fade-in">
+        <!-- Avatar image in top left corner -->
+        <img src="your-avatar.jpg" style="width:100%; border-radius: 50%; border: 5px solid #444; box-shadow: 0 4px 8px rgba(0,0,0,0.5);" class="zoom-in">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black pulse">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT</p>
+        </a>
+        <a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
+            <i class="fa fa-cogs w3-xxlarge"></i>
+            <p>SKILLS</p>
+        </a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
+            <i class="fa fa-briefcase w3-xxlarge"></i>
+            <p>PROJECTS</p>
+        </a>
+        <a href="#responsibility" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
+            <i class="fa fa-briefcase w3-xxlarge"></i>
+            <p>ADDITIONAL RESPONSIBILITIES</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black pulse">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT</p>
+        </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small zoom-in">
+            <a href="#home" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
+            <a href="#skills" class="w3-bar-item w3-button" style="width:20% !important">SKILLS</a>
+            <a href="#projects" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
+            <a href="#responsibility" class="w3-bar-item w3-button" style="width:20% !important">ADDITIONAL RESPONSIBILITIES</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black fade-in" id="home">
+            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Shabnam Shaikh.</h1>
+            <p>Lead Software Developer</p>
+            <img src="your-image.jpg" alt="Shabnam Shaikh" class="w3-image zoom-in" width="992" height="1108">
+        </header>
+
+        <!-- About Section -->
+       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">About Me</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>I am an accomplished Software Developer with extensive expertise in Python, AI, and machine learning. My proficiency in C#, .NET Framework, and cloud platforms, combined with a strong track record of enhancing system performance and driving project success, positions me as a valuable asset to any forward-thinking organization.</p>
+
+            <p>I have spearheaded the development of comprehensive project management tools, improving project efficiency by 30% and reducing delivery timelines by 20%. My experience includes implementing advanced UI enhancements using Ajax and jQuery, which increased user satisfaction by 25%, and designing scalable architectures to support a 50% increase in user load.</p>
+
+            <p>In my previous roles, I have successfully enhanced system functionalities using technologies such as C#.NET, DevExtreme, Entity Framework 6.0, and Web API, resulting in a 35% boost in system performance and a 20% reduction in data errors through advanced validation techniques. My commitment to high-quality solutions is demonstrated by resolving critical testing issues, thereby enhancing system reliability by 30%, and managing system records with 100% data integrity and accessibility.</p>
+
+            <p>I am skilled in various programming languages and technologies, including HTML, CSS, JavaScript, Python, React.js, Bootstrap, and Git. My experience spans front-end and back-end development, with proficiency in Entity Framework 6.0, Web API, Django Rest Framework, and Microsoft SQL Server Management Studio. Additionally, I am well-versed in deployment and collaboration using Azure DevOps and have hands-on experience with cloud platforms and IIS Hosting.</p>
+
+            <p>As a proactive member of the POSH (Prevention of Sexual Harassment) committee, I am dedicated to fostering a safe and respectful workplace environment. My passion for leveraging AI-driven solutions and advancing software development drives me to contribute effectively to cutting-edge, tech-focused organizations.</p>
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="w3-padding-64 w3-content animate-on-scroll" id="skills">
+            <h2 class="w3-text-light-grey">Technical Skills</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <div class="w3-card">
+                <h3 class="w3-padding-16">Programming Languages</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+            <div class="w3-card">
+                <h3 class="w3-padding-16">Front-end Development</h3>
+                <ul>
+                    <li>Bootstrap</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                </ul>
+            </div>
+            <div class="w3-card">
+                <h3 class="w3-padding-16">Databases</h3>
+                <ul>
+                    <li>Microsoft SQL Server Management Studio</li>
+                </ul>
+            </div>
+            <div class="w3-card">
+                <h3 class="w3-padding-16">Version Control</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </div>
+
+<!-- Projects Section -->
+<div class="w3-padding-64 w3-content animate-on-scroll" id="projects">
+    <h2 class="w3-text-light-grey">Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-row-padding" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+        <!-- Project 1: MS SQL Server Security -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-lock w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">MS SQL Server Security</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Designed and implemented security features for Microsoft SQL Server to enhance data protection and integrity. Developed advanced access control measures and encryption protocols, resulting in a 40% improvement in data security.</p>
+            </div>
+        </div>
+
+        <!-- Project 2: Python API Calling with Django Rest Framework -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-code w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">Python API Calling with Django Rest Framework</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Created robust APIs using Django Rest Framework to facilitate efficient data exchanges between applications. Optimized API performance, achieving a 35% increase in response speed and a 25% improvement in system reliability.</p>
+            </div>
+        </div>
+
+        <!-- Project 3: Python API Calling with Flask -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-cogs w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">Python API Calling with Flask</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Developed lightweight and scalable APIs using Flask for seamless integration with various systems. Enhanced API functionalities and security features, resulting in a 30% improvement in application performance and a 20% increase in user engagement.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+        <!-- Project 4: Micro Planning Tool (MPT) -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-calendar w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">Micro Planning Tool (MPT)</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Orchestrated the development of a CCPM-based project management tool. Leveraged C#, .NET Framework, and advanced analytics to create dynamic dashboards. Led a cross-functional team to integrate comprehensive project tracking features, achieving a 30% improvement in project tracking efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Project 5: Execution Data Management (ExDM) -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-database w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">Execution Data Management (ExDM)</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Designed and implemented a robust project data management system using Python, Django Rest Framework, and Microsoft SQL Server. Increased efficiency by 30% through optimized data workflows. Enhanced user satisfaction by 25% with intuitive UI design using DevExpress.</p>
+            </div>
+        </div>
+
+        <!-- Project 6: MPT Enterprise -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-globe w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">MPT Enterprise</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Developed a global data management system focused on enhancing data accuracy by 35%. Utilized C#.NET and ASP.NET MVC for development. Integrated the system with Azure for cloud solutions, achieving a 30% increase in user adoption. Designed an intuitive interface with responsive design using Bootstrap and jQuery.</p>
+            </div>
+        </div>
+
+        <!-- Project 7: Proposal Data Management (PrDM) -->
+        <div class="w3-col l4 s12" style="flex: 1 1 30%; margin-bottom: 16px;">
+            <div class="w3-card w3-round-large w3-dark-grey w3-padding w3-hover-shadow" style="height: 100%;">
+                <i class="fa fa-briefcase w3-xxlarge w3-text-teal"></i>
+                <h3 class="w3-text-light-grey">Proposal Data Management (PrDM)</h3>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p>Led the development of a project tracking system ensuring data integrity and comprehensive oversight of all development cycles. Utilized JavaScript and React.js for implementation. Employed Git for version control to ensure seamless collaboration. Facilitated deployment through Azure DevOps and IIS Hosting.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Additional Responsibilities Section -->
+<div class="w3-padding-64 w3-content animate-on-scroll" id="responsibility">
+    <h2 class="w3-text-light-grey">Additional Responsibilities</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- POSH Committee Member -->
+    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
+        <h3 class="w3-text-light-grey">POSH Committee Member</h3>
+        <p>Actively involved in the POSH committee, working to ensure a safe and respectful workplace environment. Led awareness campaigns and organized training sessions to promote understanding and compliance with POSH regulations. Facilitated confidential reporting channels and contributed to policy development.</p>
+    </div>
+
+    <!-- Training Coordinator -->
+    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
+        <h3 class="w3-text-light-grey">Training Coordinator</h3>
+        <p>Coordinated and conducted training sessions for new hires and existing staff on various technical and soft skills. Developed training materials and assessment tools to evaluate the effectiveness of the programs. Worked closely with department heads to tailor training to specific team needs, enhancing overall productivity by 20%.</p>
+    </div>
+
+    <!-- Volunteer Tech Support -->
+    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
+        <h3 class="w3-text-light-grey">Volunteer Tech Support</h3>
+        <p>Provided volunteer tech support for community events and local non-profit organizations. Assisted with setting up technology for events, troubleshooting technical issues, and offering training on software and hardware use. Contributed to successful event execution and improved technology access for underserved communities.</p>
+    </div>
+
+    <!-- Cross-Departmental Collaboration Lead -->
+    <div class="w3-card w3-round-large w3-padding w3-margin-bottom w3-dark-grey">
+        <h3 class="w3-text-light-grey">Cross-Departmental Collaboration Lead</h3>
+        <p>Led initiatives to improve collaboration between different departments within the organization. Implemented communication strategies and tools to streamline inter-departmental workflows. Facilitated regular meetings and feedback sessions to address issues and foster a collaborative environment, resulting in a 15% increase in project efficiency.</p>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <!-- Contact Information -->
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col l4 m6 s12 w3-padding-16">
+            <div class="w3-card w3-round-large w3-light-grey w3-padding w3-hover-shadow">
+                <i class="fa fa-envelope w3-xxlarge w3-text-teal"></i>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:shabnam041998@gmail.com" class="w3-text-teal">Get in Touch</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="w3-col l4 m6 s12 w3-padding-16">
+            <div class="w3-card w3-round-large w3-light-grey w3-padding w3-hover-shadow">
+                <i class="fa fa-linkedin w3-xxlarge w3-text-blue"></i>
+                <h3>LinkedIn</h3>
+                <p>
+                    <a href="http://www.linkedin.com/in/shabnamShaikh1998" target="_blank" class="w3-text-blue">Connect with me</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Form -->
+    <div class="w3-padding-32 w3-center">
+        <p>If you have any questions or would like to discuss potential opportunities, please feel free to reach out.</p>
+        <form action="mailto:shabnam041998@gmail.com" method="post" enctype="text/plain">
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-col l6 m12 s12">
+                    <input class="w3-input w3-border w3-round-large" type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="w3-col l6 m12 s12">
+                    <input class="w3-input w3-border w3-round-large" type="email" name="email" placeholder="Your Email" required>
+                </div>
+            </div>
+            <textarea class="w3-input w3-border w3-round-large w3-margin-top" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button class="w3-button w3-teal w3-round-large w3-margin-top" type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+
+    </div>
+    
+</body>
+</html>
